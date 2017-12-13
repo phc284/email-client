@@ -1,0 +1,4 @@
+/client/public
+node_modules
+.jshintrc
+package-lock.json
