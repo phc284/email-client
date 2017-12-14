@@ -3,10 +3,10 @@ Before using this application make sure you have installed:
 * NodeJs
 
 
-#Installation
+# Installation
 Run `npm-install` from the root directory in your terminal
 
-#Technologies
+# Technologies
 * ReactJs
 * NodeJs
 * Express
