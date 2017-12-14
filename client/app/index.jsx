@@ -6,8 +6,6 @@ import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import store from './store.js';
 import App from './containers/App';
 
-console.log(store.getState())
-
 render(
   <MuiThemeProvider>
     <Provider store={store}>

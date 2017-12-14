@@ -13,7 +13,6 @@ class SendForm extends Component {
   }
 
   render() {
-    console.log('sendform',this.props)
     const actions = [
       <FlatButton
         label="Cancel"

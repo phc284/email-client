@@ -21,7 +21,6 @@ class App extends React.Component {
   }
 
   render() {
-    console.log('appjs', this.props)
     return (
       <div className="container">
         <div className="row justify-content-center">

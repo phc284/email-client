@@ -10,7 +10,6 @@ export function emailReducer(state={}, action) {
 }
 
 export function modalReducer(state=false, action) {
-  console.log(state)
   switch (action.type) {
     case OPEN_MODAL:
       return true
