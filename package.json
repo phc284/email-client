@@ -4,12 +4,10 @@
   "description": "",
   "main": "server/server.js",
   "scripts": {
-    "dev": "concurrently \"nodemon server/server.js\" \"webpack -d -w\"",
     "webpack-watch": "webpack -w",
     "express-server": "nodemon server/server.js",
     "build": "webpack -p",
     "start": "concurrently \"nodemon server/server.js\" \"webpack -d -w\"",
-    "heroku-postbuild": "npm install --only=dev && npm install && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -33,6 +31,5 @@
   },
   "devDependencies": {
     "babel-preset-env": "^1.6.1"
-  },
-  "proxy": "http://localhost:3000"
+  }
 }
