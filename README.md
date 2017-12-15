@@ -21,13 +21,13 @@ Copy and paste this code in `keys.js` and fill in the required properties
 
 ```
 const sendGridConfig = {
-  apiKey: '<API KEY>'
+  apiKey: 'YOUR_API_KEY'
 };
 
 const awsConfig = {
-  accessKeyId: '<AccessKey>',
-  secretAccessKey: '<Secret>',
-  region: '<Region>'
+  accessKeyId: 'YOUR_ACCESS_KEY_ID',
+  secretAccessKey: 'YOUR_SECRET_KEY',
+  region: 'YOUR_REGION'
 };
 
 module.exports = {
