@@ -19,8 +19,8 @@ app.post('/api/send', (req, res) => {
   sgMail.setApiKey(sendGridConfig.apiKey);
 
   const msg = {
-    t: req.body.to,
-    fom: req.body.from,
+    to: req.body.to,
+    from: req.body.from,
     subject: req.body.subject,
     text: req.body.message
   };
@@ -29,6 +29,7 @@ app.post('/api/send', (req, res) => {
       //Success -> send back host
       res.send({ host: 'SendGrid' });
     }).catch(error => {
+      //if an error with SendGrid, send through Amazon SES
       const params = {
         Destination: {
           ToAddresses: [req.body.to]

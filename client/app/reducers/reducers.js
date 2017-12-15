@@ -1,10 +1,10 @@
 import { SEND_EMAIL, OPEN_MODAL, CLOSE_MODAL } from '../actions';
 
 export function emailReducer(state={}, action) {
-  console.log('payload', action.payload)
+
   switch (action.type) {
     case SEND_EMAIL:
-      return { status: action.payload}
+      return {...state}
     default:
       return state
   }

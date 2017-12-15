@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { RaisedButton } from 'material-ui';
+import { RaisedButton, FlatButton, Dialog } from 'material-ui';
 
 //components
 import SendForm from '../components/SendForm';
@@ -15,6 +15,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
   }
+
 
   render() {
     return (
@@ -37,7 +38,7 @@ class App extends React.Component {
 }
 
 function mapStateToProps(state) {
-  return { modalOpen: state.modal }
+  return { modalOpen: state.modal, status: state.status }
 }
 
 function mapDispatchToProps (dispatch) {

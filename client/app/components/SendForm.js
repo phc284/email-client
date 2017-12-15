@@ -32,6 +32,7 @@ class SendForm extends Component {
     reset();
   }
 
+
   render() {
     const { handleSubmit, reset } = this.props;
 
@@ -69,24 +70,24 @@ class SendForm extends Component {
 function validate(values) {
   const errors = {};
 
-  if(!values.to) {
-    errors.to = "Enter an email"
+  if(!values.to || !values.to.includes('@')) {
+    errors.to = "Enter a valid email"
   }
-  if(!values.from) {
-    errors.from = "Enter an email"
+  if(!values.from || !values.to.includes('@')) {
+    errors.from = "Enter a valid email"
   }
   if(!values.subject) {
     errors.subject = "Enter a subject"
   }
   if(!values.message) {
-    errors.message = "You will still be able to send, but your body is empty"
+    errors.message = "Are you sure you want to submit an empty message?"
   }
 
   return errors;
 }
 
 function mapStateToProps(state) {
-  return { modalOpen: state.modal };
+  return { modalOpen: state.modal, status: state.status };
 }
 
 function mapDispatchToProps(dispatch) {
