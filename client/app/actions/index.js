@@ -5,9 +5,9 @@ export const OPEN_MODAL = 'open_modal';
 export const CLOSE_MODAL = 'close_modal';
 
 export const sendEmail = (values) => {
-  console.log('action values', values)
+  /* ReduxPromise middleware will fulfill `request` when sent to reducer */
   var request = axios.post('/api/send', values)
-  
+
   return {
     type: SEND_EMAIL,
     payload: request

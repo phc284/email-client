@@ -2,9 +2,7 @@ label {
   margin-top: 10px;
 }
 
-.btn-primary {
-
-}
-
-.title {
+.row .title{
+  margin-top: 3em;
+  height: 3em;
 }

@@ -14,16 +14,12 @@ import { openModal, closeModal} from '../actions'
 class App extends React.Component {
   constructor(props) {
     super(props);
-
-  }
-
-  componentWillMount() {
   }
 
   render() {
     return (
       <div className="container">
-        <div className="row justify-content-center">
+        <div className="row title justify-content-center align-items-center">
           <h1 className="title">Welcome to Email-Client</h1>
         </div>
         <div className="row justify-content-center">

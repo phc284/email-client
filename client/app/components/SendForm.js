@@ -7,6 +7,8 @@ import { bindActionCreators } from 'redux';
 import { closeModal, openModal, sendEmail } from '../actions';
 
 class SendForm extends Component {
+
+  /* Render text fields for each Field in form */
   renderField(field) {
     const { meta: { touched, error} } = field;
     const className = `form-group ${touched && error ? 'has-danger' : ''}`
@@ -25,9 +27,9 @@ class SendForm extends Component {
 
   onSubmit(values) {
     const { reset } = this.props;
-    this.props.sendEmail(values, () => {
-      reset();
-    });
+    this.props.sendEmail(values);
+
+    reset();
   }
 
   render() {
@@ -54,7 +56,7 @@ class SendForm extends Component {
           <Field name="from" label="From" component={this.renderField} />
           <Field name="subject" label="Subject" component={this.renderField} />
           <Field name="message" label="Message" component={this.renderField} />
-          <button type="submit" onClick={reset} className="btn btn-primary">
+          <button type="submit" className="btn btn-primary">
             Submit
           </button>
         </form>
@@ -63,6 +65,7 @@ class SendForm extends Component {
   }
 }
 
+/* Redux-form text validation */
 function validate(values) {
   const errors = {};
 
