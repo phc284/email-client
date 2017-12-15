@@ -8,6 +8,10 @@ Follow the instructions for SendGrid and make sure to add verified email address
 
 
 # Installation and Required Materials
+Clone this repo on to your local machine by either downloading the .zip or running:
+
+`git clone https://github.com/phc284/email-client.git`
+
 This application makes use of [Nodemon](https://github.com/remy/nodemon), which actively monitors changes in your node.js application.
 
 Run `npm install -g nodemon`
