@@ -14,6 +14,7 @@ Run `npm install -g nodemon`
 
 Traverse to the root directory of the application and run **`npm-install`** to install all dependencies
 
+# Setting Up Config
 Create a new folder named `config` in the root directory and create a new file `keys.js` within it.
 
 Copy and paste this code in `keys.js` and fill in the required properties
@@ -34,6 +35,9 @@ module.exports = {
   awsConfig
 };
 ```
+
+The `keys.js` file is used to keep private keys and user identification safe from the public
+
 
 # Running For Development
 Running **`npm start`** will start the client at http://localhost:3000
