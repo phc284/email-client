@@ -14,9 +14,9 @@ Run `npm install -g nodemon`
 
 Traverse to the root directory of the application and run **`npm-install`** to install all dependencies
 
-Create a new file in the `config` folder named `keys.js`
+Create a new folder named `config` in the root directory and create a new file `keys.js` within it.
 
-Copy and paste this code and fill in the required properties
+Copy and paste this code in `keys.js` and fill in the required properties
 
 ```
 const sendGridConfig = {
