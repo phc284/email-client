@@ -7,8 +7,7 @@ export const CLOSE_MODAL = 'close_modal';
 export const sendEmail = (values) => {
   console.log('action values', values)
   var request = axios.post('/api/send', values)
-    .then(() => 'Success')
-    .catch((err) => 'Error')
+  
   return {
     type: SEND_EMAIL,
     payload: request

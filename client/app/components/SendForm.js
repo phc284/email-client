@@ -24,14 +24,14 @@ class SendForm extends Component {
   }
 
   onSubmit(values) {
-    console.log('values', values);
+    const { reset } = this.props;
     this.props.sendEmail(values, () => {
-      console.log('SENT!');
+      reset();
     });
   }
 
   render() {
-    const { handleSubmit } = this.props;
+    const { handleSubmit, reset } = this.props;
 
     const actions = [
       <FlatButton
@@ -54,7 +54,7 @@ class SendForm extends Component {
           <Field name="from" label="From" component={this.renderField} />
           <Field name="subject" label="Subject" component={this.renderField} />
           <Field name="message" label="Message" component={this.renderField} />
-          <button type="submit" className="btn btn-primary">
+          <button type="submit" onClick={reset} className="btn btn-primary">
             Submit
           </button>
         </form>
