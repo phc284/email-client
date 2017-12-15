@@ -8,7 +8,11 @@ Follow the instructions for SendGrid and make sure to add verified email address
 
 
 # Installation and Required Materials
-Run **`npm-install`** from the root directory in your terminal
+This application makes use of [Nodemon](https://github.com/remy/nodemon), which actively monitors changes in your node.js application.
+
+Run `npm install -g nodemon`
+
+Traverse to the root directory of the application and run **`npm-install`** to install all dependencies
 
 Create a new file in the `config` folder named `keys.js`
 

@@ -3,4 +3,4 @@ node_modules
 .jshintrc
 package-lock.json
 .DS_Store
-/config/keys.js
+keys.js
