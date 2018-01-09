@@ -5,6 +5,8 @@ Please sign up for accounts on **[Amazon SES](https://docs.aws.amazon.com/ses/la
 
 Follow the instructions for SendGrid and make sure to add verified email addresses to your Amazon SES account to send emails.
 
+There is a separate branch `v2` that has a better method of a fail safe for the email
+
 
 
 # Installation and Required Materials
