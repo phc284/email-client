@@ -25,10 +25,19 @@ app.post('/api/send', (req, res) => {
     text: req.body.message
   };
 
+  var sgMailFail = false;
   sgMail.send(msg).then(() => {
       //Success -> send back host
       res.send({ host: 'SendGrid' });
     }).catch(error => {
+      if (error) {
+        sgMailFail = true;
+      }
+      res.send(404, error);
+    });
+
+    //if first mail server fails, try fail-safe
+    if (sgMailFail) {
       //if an error with SendGrid, send through Amazon SES
       const params = {
         Destination: {
@@ -58,8 +67,9 @@ app.post('/api/send', (req, res) => {
       //send back that SES as host
       res.send({ host: 'SES' });
       console.log('failed sg');
-    }).then((s) => {
-    });
+    }
+
+
 });
 
 //PORT
